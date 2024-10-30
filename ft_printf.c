@@ -6,7 +6,7 @@
 /*   By: cabo-ram <cabo-ram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:18:19 by cabo-ram          #+#    #+#             */
-/*   Updated: 2024/10/30 14:55:06 by cabo-ram         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:57:43 by cabo-ram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ int	ft_putchar(char c)
 
 int	ft_putstr(const char *str)
 {
-	int	i;
-
-	i = 0;
+	int	i = 0;
+	
 	if (str == NULL)
 		return (write(1, "(null)", 6));
 	while (str[i] != '\0')
