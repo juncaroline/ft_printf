@@ -6,7 +6,7 @@
 /*   By: cabo-ram <cabo-ram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:18:19 by cabo-ram          #+#    #+#             */
-/*   Updated: 2024/10/30 16:59:24 by cabo-ram         ###   ########.fr       */
+/*   Updated: 2024/11/01 16:34:00 by cabo-ram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,24 +35,21 @@ int	ft_putstr(const char *str)
 
 static int	convert(const char ltr, va_list args)
 {
-	int	length;
-
-	length = 0;
 	if (ltr == '%')
-		length += ft_putchar('%');
+		return (ft_putchar('%'));
 	else if (ltr == 'c')
-		length += ft_putchar(va_arg(args, int));
+		return (ft_putchar(va_arg(args, int)));
 	else if (ltr == 's')
-		length += ft_putstr(va_arg(args, const char *));
+		return (ft_putstr(va_arg(args, const char *)));
 	else if (ltr == 'p')
-		length += ft_putptr(va_arg(args, void *));
+		return (ft_putptr(va_arg(args, void *)));
 	else if (ltr == 'd' || ltr == 'i')
-		length += ft_putint(va_arg(args, int));
+		return (ft_putint(va_arg(args, int)));
 	else if (ltr == 'u')
-		length += ft_putuint_ptr(va_arg(args, int));
+		return (ft_putuint(va_arg(args, unsigned int)));
 	else if (ltr == 'x' || ltr == 'X')
-		length += ft_puthexa(va_arg(args, unsigned int), ltr);
-	return (length);
+		return (ft_puthexa(va_arg(args, unsigned int), ltr));
+	return (0);
 }
 
 int	ft_printf(const char *str, ...)
@@ -63,6 +60,10 @@ int	ft_printf(const char *str, ...)
 
 	i = 0;
 	length = 0;
+	if (str == NULL)
+	{
+		return (-1);
+	}
 	va_start(args, str);
 	while (str[i])
 	{

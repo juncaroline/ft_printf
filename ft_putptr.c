@@ -6,7 +6,7 @@
 /*   By: cabo-ram <cabo-ram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 10:53:24 by cabo-ram          #+#    #+#             */
-/*   Updated: 2024/10/30 15:43:21 by cabo-ram         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:57:56 by cabo-ram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static size_t	ptr_digits(unsigned long n)
 		return (1);
 	while (n != 0)
 	{
-		i++;
 		n = n / 16;
+		i++;
 	}
 	return (i);
 }

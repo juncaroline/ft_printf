@@ -6,7 +6,7 @@
 /*   By: cabo-ram <cabo-ram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:17:33 by cabo-ram          #+#    #+#             */
-/*   Updated: 2024/10/30 16:05:34 by cabo-ram         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:14:37 by cabo-ram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static size_t	hexa_digits(unsigned int n)
 		return (1);
 	while (n != 0)
 	{
-		i++;
 		n = n / 16;
+		i++;
 	}
 	return (i);
 }

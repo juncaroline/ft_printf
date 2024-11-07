@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putuint_ptr.c                                   :+:      :+:    :+:   */
+/*   ft_putuint.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cabo-ram <cabo-ram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:20:35 by cabo-ram          #+#    #+#             */
-/*   Updated: 2024/10/30 12:28:37 by cabo-ram         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:42:52 by cabo-ram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	print_uint(unsigned int n)
 	ft_putchar(digits[n % 10]);
 }
 
-int	ft_putuint_ptr(unsigned int n)
+int	ft_putuint(unsigned int n)
 {
 	print_uint(n);
 	return (uint_digits(n));

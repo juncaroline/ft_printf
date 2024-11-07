@@ -6,7 +6,7 @@
 /*   By: cabo-ram <cabo-ram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:29:42 by cabo-ram          #+#    #+#             */
-/*   Updated: 2024/10/30 12:37:27 by cabo-ram         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:57:33 by cabo-ram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 int	ft_putint(int n);
-int	ft_putuint_ptr(unsigned int n);
+int	ft_putuint(unsigned int n);
 int	ft_puthexa(unsigned int n, const char format);
 int	ft_putptr(void *nbr);
 int	ft_putchar(char c);
